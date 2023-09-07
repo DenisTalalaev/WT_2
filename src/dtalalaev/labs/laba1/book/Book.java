@@ -7,6 +7,10 @@ public class Book {
     private int price;
     private static int edition;
 
+    public Book clone(){
+        return new Book(this.title, this.author, this.price);
+    }
+
     @Override
     public boolean equals(Object book2) {
         Book book = (Book) book2;
