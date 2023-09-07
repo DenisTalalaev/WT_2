@@ -6,7 +6,24 @@ import java.util.Arrays;
 public class Lab1_8 {
 
     public static ArrayList<Integer> findMergeIndexes(ArrayList<Integer>  arr1, ArrayList<Integer>  arr2){
-        return new ArrayList<>();
+        if(arr2.isEmpty()) {
+            return new ArrayList<>();
+        }
+        ArrayList<Integer> indexes = new ArrayList<>();
+        int i = 0;
+        int j = 0;
+        while( i < arr1.size() && j < arr2.size()) {
+            if(arr1.get(i) <= arr2.get(j)) {
+                i++;
+            } else {
+                indexes.add(i); j++;
+            }
+        }
+        while (j < arr2.size()) {
+            indexes.add(i);
+            j++;
+        }
+        return indexes;
     }
 
     public static void main(String[] args) {
