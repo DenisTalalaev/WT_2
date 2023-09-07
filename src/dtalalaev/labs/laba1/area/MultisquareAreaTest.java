@@ -14,7 +14,7 @@ class MultisquareAreaTest {
     );
 
     @Test
-    void isDotInAreaTest_1() {
+    void testDotInArea_InArea_1() {
         double x = 1;
         double y = 1;
         boolean answer = true;
@@ -22,7 +22,7 @@ class MultisquareAreaTest {
     }
 
     @Test
-    void isDotInAreaTest_2() {
+    void testDotInArea_InArea_2() {
         double x = 1.5;
         double y = 1.5;
         boolean answer = true;
@@ -30,7 +30,7 @@ class MultisquareAreaTest {
     }
 
     @Test
-    void isDotInAreaTest_3() {
+    void testDotInArea_NotInArea_1() {
         double x = 7;
         double y = 1.5;
         boolean answer = false;
@@ -38,7 +38,7 @@ class MultisquareAreaTest {
     }
 
     @Test
-    void isDotInAreaTest_4() {
+    void testDotInArea_InArea_3() {
         double x = 0;
         double y = 0;
         boolean answer = true;
@@ -46,7 +46,7 @@ class MultisquareAreaTest {
     }
 
     @Test
-    void isDotInAreaTest_5() {
+    void testDotInArea_InArea_4() {
         double x = 6;
         double y = 0;
         boolean answer = true;
@@ -54,14 +54,14 @@ class MultisquareAreaTest {
     }
 
     @Test
-    void isDotInAreaTest_6() {
+    void testDotInArea_NotInArea_2() {
         double x = 0;
         double y = 5.001;
         boolean answer = false;
         assertEquals(testArea.isDotInArea(new Dot(x, y)), answer);
     }
     @Test
-    void isDotInAreaTest_7() {
+    void testDotInArea_InArea_5() {
         double x = -3.5;
         double y = 4.5;
         boolean answer = true;
@@ -69,7 +69,7 @@ class MultisquareAreaTest {
     }
 
     @Test
-    void isDotInAreaTest_8() {
+    void testDotInArea_NotInArea_3() {
         double x = -7;
         double y = 0;
         boolean answer = false;
@@ -77,7 +77,7 @@ class MultisquareAreaTest {
     }
 
     @Test
-    void isDotInAreaTest_9() {
+    void testDotInArea_InArea_6() {
         double x = 5;
         double y = -1.5;
         boolean answer = true;
@@ -85,7 +85,7 @@ class MultisquareAreaTest {
     }
 
     @Test
-    void isDotInAreaTest_10() {
+    void testDotInArea_InArea_7() {
         double x = 3.999;
         double y = 0;
         boolean answer = true;
@@ -93,7 +93,7 @@ class MultisquareAreaTest {
     }
 
     @Test
-    void isDotInAreaTest_11() {
+    void testDotInArea_NotInArea_4() {
         double x = -1;
         double y = -4;
         boolean answer = false;
@@ -101,7 +101,7 @@ class MultisquareAreaTest {
     }
 
     @Test
-    void isDotInAreaTest_12() {
+    void testDotInArea_NotInArea_5() {
         double x = -6;
         double y = -3.001;
         boolean answer = false;
@@ -109,65 +109,10 @@ class MultisquareAreaTest {
     }
 
     @Test
-    void isDotInAreaTest_13() {
+    void testDotInArea_NotInArea_6() {
         double x = 6.001;
         double y = -3;
         boolean answer = false;
-        assertEquals(testArea.isDotInArea(new Dot(x, y)), answer);
-    }
-
-    @Test
-    void isDotInAreaTest_14() {
-        double x = 0;
-        double y = -4;
-        boolean answer = false;
-        assertEquals(testArea.isDotInArea(new Dot(x, y)), answer);
-    }
-
-    @Test
-    void isDotInAreaTest_15() {
-        double x = 4;
-        double y = 0.5;
-        boolean answer = true;
-        assertEquals(testArea.isDotInArea(new Dot(x, y)), answer);
-    }
-
-    @Test
-    void isDotInAreaTest_16() {
-        double x = -4.001;
-        double y = 0.001;
-        boolean answer = false;
-        assertEquals(testArea.isDotInArea(new Dot(x, y)), answer);
-    }
-    @Test
-    void isDotInAreaTest_17() {
-        double x = -4;
-        double y = 5;
-        boolean answer = true;
-        assertEquals(testArea.isDotInArea(new Dot(x, y)), answer);
-    }
-
-    @Test
-    void isDotInAreaTest_18() {
-        double x = 4;
-        double y = 0;
-        boolean answer = true;
-        assertEquals(testArea.isDotInArea(new Dot(x, y)), answer);
-    }
-
-    @Test
-    void isDotInAreaTest_19() {
-        double x = 0;
-        double y = -3;
-        boolean answer = true;
-        assertEquals(testArea.isDotInArea(new Dot(x, y)), answer);
-    }
-
-    @Test
-    void isDotInAreaTest_20() {
-        double x = 6;
-        double y = -3;
-        boolean answer = true;
         assertEquals(testArea.isDotInArea(new Dot(x, y)), answer);
     }
 

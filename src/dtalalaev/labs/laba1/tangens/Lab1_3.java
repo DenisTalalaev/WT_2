@@ -14,6 +14,8 @@ public class Lab1_3 {
         System.out.println("Enter step");
         h = scanner.nextDouble();
 
+        scanner.close();
+
         TangensIntervals tangensIntervals = new TangensIntervals(a, b, h);
         tangensIntervals.calculate();
         System.out.println(tangensIntervals.getTable());

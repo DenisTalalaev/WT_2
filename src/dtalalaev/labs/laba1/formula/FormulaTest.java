@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 class FormulaTest {
 
     @Test
-    void calculateTest_1() {
+    void testCalculate_GeneralTest_1() {
         Formula formula = new Formula(1,1);
         try {
             formula.calculate();
@@ -17,7 +17,7 @@ class FormulaTest {
     }
 
     @Test
-    void calculateTest_2() {
+    void testCalculate_GeneralTest_2() {
         Formula formula = new Formula(151,-151);
         try {
             formula.calculate();
@@ -28,7 +28,7 @@ class FormulaTest {
     }
 
     @Test
-    void calculateTest_3() {
+    void testCalculate_GeneralTest_3() {
         Formula formula = new Formula(0,-0);
         try {
             formula.calculate();
@@ -39,7 +39,7 @@ class FormulaTest {
     }
 
     @Test
-    void calculateTest_4() {
+    void testCalculate_GeneralTest_4() {
         Formula formula = new Formula(0,3.1415926);
         try {
             formula.calculate();
@@ -50,7 +50,7 @@ class FormulaTest {
     }
 
     @Test
-    void calculateTest_5() {
+    void testCalculate_GeneralTest_5() {
         Formula formula = new Formula(Math.PI,Math.PI/2);
         try {
             formula.calculate();

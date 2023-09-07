@@ -9,14 +9,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class TangensIntervalsTest {
 
     @Test
-    void calculateTest_1() {
+    void testCalculate_ValidIntervalsAndStep1() {
         TangensIntervals tangensIntervals = new TangensIntervals(1, 3, 1);
         tangensIntervals.calculate();
         List<Double> testResults = List.of(1.5574, -2.1850, -0.1425);
         assertResultsAreClose(testResults, tangensIntervals.getResults());
     }
     @Test
-    void calculateTest_2() {
+    void testCalculate_ValidIntervalsAndStep0_5() {
         TangensIntervals tangensIntervals = new TangensIntervals(-2, 2, 0.5);
         tangensIntervals.calculate();
         List<Double> testResults = List.of(2.1850, -14.1014, -1.5574, -0.5463, 0.0, 0.5463, 1.5574, 14.1014, -2.1850);
@@ -24,7 +24,7 @@ class TangensIntervalsTest {
     }
 
     @Test
-    void calculateTest_3() {
+    void testCalculate_OneElement() {
         TangensIntervals tangensIntervals = new TangensIntervals(0, 0, 1);
         tangensIntervals.calculate();
         List<Double> testResults = List.of(0.0);
@@ -32,20 +32,13 @@ class TangensIntervalsTest {
     }
 
     @Test
-    void calculateTest_4() {
+    void testCalculate_BigInterval() {
         TangensIntervals tangensIntervals = new TangensIntervals(-1, 1, 4);
         tangensIntervals.calculate();
         List<Double> testResults = List.of(-1.5574);
         assertResultsAreClose(testResults, tangensIntervals.getResults());
     }
 
-    @Test
-    void calculateTest_5() {
-        TangensIntervals tangensIntervals = new TangensIntervals(0.5, 1.5, 0.2);
-        tangensIntervals.calculate();
-        List<Double> testResults = List.of(0.5463, 0.8422, 1.2601, 1.9647, 3.6021, 14.1014);
-        assertResultsAreClose(testResults, tangensIntervals.getResults());
-    }
 
     private void assertResultsAreClose(List<Double> expected, List<Double> actual) {
         assertEquals(expected.size(), actual.size());

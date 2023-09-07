@@ -22,7 +22,6 @@ public class TangensIntervals {
         if (results == null) {
             results = new ArrayList<>();
         }
-        ;
         while (b + h / 2.0 > a + results.size() * h) {
             results.add(Math.tan(h * results.size() + a));
         }
