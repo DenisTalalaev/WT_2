@@ -1,6 +1,5 @@
 package dtalalaev.labs.laba1.book;
 
-import java.util.Objects;
 
 public class Book {
     private String title;
