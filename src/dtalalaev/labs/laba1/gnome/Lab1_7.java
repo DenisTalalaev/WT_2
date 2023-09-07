@@ -22,7 +22,13 @@ public class Lab1_7 {
     }
 
     public static int[] gnomeSort(int[] arr) {
+        if(arr == null) {
+            return null;
+        }
         int n = arr.length;
+        if(n == 1) {
+            return arr;
+        }
         int index = 0;
         while(index < n){
             if(index == 0){
