@@ -7,17 +7,26 @@ public class Book {
     private int price;
     private static int edition;
 
-    public Book clone(){
+    public Book clone() {
         return new Book(this.title, this.author, this.price);
     }
 
     @Override
     public boolean equals(Object book2) {
+        if (book2 == null || book2.getClass() != this.getClass()){
+            return false;
+        }
         Book book = (Book) book2;
-        if (this == book2) return true;
-        return price==book.price &&
-                title.equals(book.title) &&
-                author.equals(book.author);
+        if (book.hashCode() == this.hashCode()) {
+            if (this == book2) {
+                return true;
+            }
+            return price == book.price &&
+                    title.equals(book.title) &&
+                    author.equals(book.author);
+        } else {
+            return false;
+        }
     }
 
     @Override
